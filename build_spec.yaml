@@ -25,6 +25,10 @@ steps:
       echo "hello world"
       echo $minor_version
       ./gradlew jar
+      ./gradlewAll publishToMavenLocal
+      ./gradlewAll install
+      ./gradlew srcJar
+      ./gradlew test
 outputArtifacts:
   - name: ABC
     type: BINARY
